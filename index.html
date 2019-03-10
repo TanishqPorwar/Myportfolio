@@ -7,10 +7,17 @@
     <title>Deadpool</title>
     <style>
         body, html {
-  height: 100%;
+  height: 400%;
   margin: 0;
 }
+.menu-button span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
 
+}
          @font-face {
             font-family: 'deadpool';
             src: URL('deadpool.ttf') format('truetype');
@@ -21,6 +28,7 @@ ul {
   padding: 0;
   overflow: hidden;
   opacity: 0.75;
+  position: fixed;
   background-color: black;
 }
 
@@ -66,15 +74,10 @@ li a:hover:not(.active) {
         </style>
 </head>
 
-<body id ="page-top" style="background:url(D3.jpg) no-repeat center center; height: 100%; " >
-    <nav class="navbar fixed-top" id="main-navbar">
-        <div class="container">
+<body id ="page-top" style="background:url(D3.jpg) no-repeat top; height: 100%; " >
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
+        <div class="container-fluid">
             <div id="navbarDefault">
-                <button>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
                  <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a href="#page-top"><p1>Deadp()l</p1></a>
@@ -94,9 +97,14 @@ li a:hover:not(.active) {
                             <li class="nav-item">
                                 <a href="#contact">Contact</a>
                                 </li>
-                            <br>
-                          </div>
-                </ul>
+                            <button type="button" class="menu-button" style="background-color: black; opacity: 0.75;">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                     </ul>
+                <br>
+            </div>
             </div>
         </div>
     </nav>
