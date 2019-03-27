@@ -1,0 +1,71 @@
+
+ body, html {
+    font-family: 'Lato', sans-serif;
+    height: 400%;
+    margin: 0;
+}
+
+.menu-button span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+
+}
+         @font-face {
+            font-family: 'deadpool';
+            src: URL('deadpool.ttf') format('truetype');
+                }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.75;
+  position: fixed;
+  background-color: black;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+  
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}    
+        
+        h1{font-family: "deadpool";
+            color :red;
+            text-align: center;
+            font-size: 80px;}
+        p1{font-family: "deadpool";
+            color :red;
+            text-align: center;
+            font-size: 15px;}
+        p{
+            font-family: serif;
+            color :white;
+            text-align: center;
+            font-size: 40px;}
+        
