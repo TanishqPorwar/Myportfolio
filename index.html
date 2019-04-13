@@ -7,32 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Deadpool</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">  
+    <link rel="stylesheet" href="css/styles.css"> 
 </head>
 
-<body id ="page-top" style="background:url(D3.jpg) no-repeat top; height: 100%; " >
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
+<body id ="page-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top " id="main-navbar">
         <div class="container-fluid">
             <div id="navbarDefault">
                  <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="#page-top"><p1>Deadp()l</p1></a>
-                                </li>
-                            <li class="nav-item">
-                                <a href="#home">Home</a>
-                                </li>
-                            <li class="nav-item">
-                                <a href="#about">About</a>
-                                </li>
-                            <li class="nav-item">
-                                <a href="#services">Services</a>
-                                </li>
-                            <li class="nav-item">
-                                <a href="#blog">Blog</a>
-                                </li>
-                            <li class="nav-item">
-                                <a href="#contact">Contact</a>
-                                </li>
+                            <li class="nav-item" >  <a href="#page-top" ><p1>Deadp()l</p1></a>  </li>
+                            <li class="nav-item">   <a href="#home" >Home</a>                   </li>
+                            <li class="nav-item">   <a href="#about" >About</a>                 </li>
+                            <li class="nav-item">   <a href="#services" >Services</a>           </li>
+                            <li class="nav-item">   <a href="#blog" >Blog</a>                   </li>
+                            <li class="nav-item">   <a href="#contact">Contact</a>              </li>
                             <button type="button" class="menu-button" style="background-color: black; opacity: 0.75; float: right;">
                                 <span></span>
                                 <span></span>
@@ -41,16 +29,56 @@
                      </ul>
                 <br>
             </div>
-            </div>
         </div>
     </nav>
 
-    <div class="intro-route" id="home">
+    <div class="home bg-image" id="home"  style="background-image: url(images/D3.jpg)">
         <div class="container">
-                <h1>DEADP()L</h1>
-                <p>GRAPHICS DESIGNER</p>
+                <div class="intro">DEADP()L</div>
+                <p class="sub">GRAPHICS DESIGNER</p>
         </div>
     </div>
+
+    <div class="about" id="about" data-midnight="scrolled" >
+        <div class="container"><h1>about</h1></div>
+    </div>
+
+    <div class="services" id="services" >
+            <div class="container"><h1>services</h1></div>
+        </div>
+
+    <div class="blog" id="blog" >
+        <div class="container"><h1>blog</h1></div>
+    </div>
+
+    <div class="contact" id="contact" >
+            <div class="container"><h1>Contact</h1></div>
+        </div>
+    
+    
+        <script>
+        let mainNavLinks = document.querySelectorAll("nav ul li a");
+
+        window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        
+        if ( section =="page-top"){
+            link.classList.remove("current");
+        }
+        if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+        ) {
+        link.classList.add("current");
+        } else {
+        link.classList.remove("current");
+        }
+        });
+        });
+        </script>
 
 </body>
 </html>

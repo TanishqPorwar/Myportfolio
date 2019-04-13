@@ -1,8 +1,9 @@
 
- body, html {
+ body,html{
     font-family: 'Lato', sans-serif;
-    height: 400%;
+    height: 250%;
     margin: 0;
+    background-color: black;
 }
 
 .menu-button span {
@@ -13,10 +14,17 @@
     margin: 6px 0;
 
 }
-         @font-face {
-            font-family: 'deadpool';
-            src: URL('deadpool.ttf') format('truetype');
-                }
+nav ul li a{
+  transition: 0.3s;
+}
+
+nav ul li a.current{
+  background-color: darkred;
+}
+@font-face {
+  font-family: 'deadpool';
+  src: URL('deadpool.ttf') format('truetype');
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -24,8 +32,8 @@ ul {
   top: 0;
   width: 100%;
   overflow: hidden;
-  opacity: 0.75;
   position: fixed;
+  opacity:0.75 ;
   background-color: black;
 }
 
@@ -42,20 +50,29 @@ li:last-child {
 li a {
   display: block;
   color: white;
-  text-align: center;
+  text-align: center; 
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color:red;
 }
 
-.active {
-  background-color: #4CAF50;
-}    
+
+.home,.about,.services,.blog,.contact{
+  height: 50%;
+  text-align: center;
+  padding: 0;
+}
+
+
+
+.about,.blog{
+  background-color: grey;
+}
         
-        h1{font-family: "deadpool";
+        .intro{font-family: "deadpool";
             color :red;
             text-align: center;
             font-size: 80px;}
@@ -63,9 +80,15 @@ li a:hover:not(.active) {
             color :red;
             text-align: center;
             font-size: 15px;}
-        p{
+        .sub, h1{
             font-family: serif;
             color :white;
             text-align: center;
             font-size: 40px;}
-        
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
